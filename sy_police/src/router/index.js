@@ -19,10 +19,10 @@ const NoFind = () => import('../views/NoFind.vue')
     component: Login
   },
   {
-    path: '/NoFind',
+    path: '/404',
     name: 'NoFind',
     component: NoFind
-  }
+  },
 ]
 
 const router = new VueRouter({

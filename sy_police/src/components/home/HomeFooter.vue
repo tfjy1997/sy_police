@@ -1,17 +1,17 @@
 <template>
-  <div class="hearder">
+  <div class="home-footer">
     
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Hearder'
+  name: 'HomeFooter'
 }
 </script>
 
 <style lang="scss" scoped>
-  .hearder{
-    
+  .home-footer {
+
   }
 </style>

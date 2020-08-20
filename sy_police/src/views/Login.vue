@@ -7,12 +7,12 @@
         <div class="content-item">
           <img :src="userImage" alt="">
           <span>用户名：</span>
-          <input type="text">
+          <input type="text" v-model="user.name">
         </div>
         <div class="content-item">
           <img :src="passwordImage" alt="">
           <span>密码：</span>
-          <input type="password">
+          <input type="password" v-model="user.password">
         </div>
         <el-button type="primary" @click="login">登录</el-button>
       </div>
@@ -28,7 +28,7 @@ export default {
       user: {
         name: '',
         password: '',
-        author: '1'
+        author: ''
       },
       bgImage: require('../assets/images/login/bg-login.png'),
       titleImage: require('../assets/images/logo.png'),
@@ -38,8 +38,20 @@ export default {
   },
   methods: {
     login () {
-      this.$store.commit('setUser', this.user)
-      this.$router.push({ path: '/home' })
+      if( this.userVerify() ) {
+        this.$router.push({ path: '/home' })
+      }
+    },
+    userVerify () {
+      console.log(this.user)
+      if ( this.user.name === '0000' && this.user.password === '123456' ){
+        this.user.author = '1'
+        this.$store.commit('setUser', this.user)
+        return true;
+      } else {
+        this.$message.error('账号或密码错误');
+        return false
+      }
     }
   },
 }
