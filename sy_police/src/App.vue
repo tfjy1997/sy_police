@@ -8,11 +8,15 @@
 html, body {
   margin:0;
   padding:0;
+  overflow: auto;
+
+
 }
 #app {
   height: 100%;
   width: 100%;
-  overflow: hidden;
+  min-width: 452px;
+  overflow: auto;
 }
 .sy-police-page {
   width: 100%;

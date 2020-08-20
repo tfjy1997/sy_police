@@ -16,8 +16,8 @@ export default {
   name: 'HomeHearder',
   data() {
     return {
-      titleZH: '思雅派出所后台管理系统',
-      titleEN: 'Siya police station background management system',
+      titleZH: 'XXXXX后台管理系统',
+      titleEN: 'xxxx xxxxxx xxxxxxx background management system',
       exitImg: require('@/assets/images/common/exit.png')
     }
   },
@@ -40,12 +40,14 @@ export default {
     .title-text {
       color: $white-color;
       display: inline-block;
-      width: 30%;
+      width: 60%;
       .zh {
         font-size: 28px;
+        min-width: 265px;
       }
       .en {
         font-size: 12px;
+        min-width: 310px;
       }
     }
     .exit-btn {
