@@ -1,7 +1,7 @@
 <template>
   <div class="nav-title">
     <div class="nav-location">
-      <span>您当前位置：{{ location }}</span>
+      <span>您当前位置：{{ locationName }}</span>
     </div>
     <div class="date-time"> {{ NowTime }}</div>
     <div class="tip-btn" @click="gotoMessagePage"><i class="el-icon-message-solid"></i></div>
@@ -13,11 +13,14 @@ export default {
   name: 'NavTitle',
   data() {
     return {
-      location: this.$store.getters.pageName,
+      location: '',
       dater: new Date(),
     }
   },
   computed: {
+    locationName() {
+      return this.$store.getters.pageName
+    },
     NowTime () {
       let timeStamp = this.dater
       let year = new Date(timeStamp).getFullYear();
@@ -51,13 +54,12 @@ export default {
     if (this.timer) {
       clearInterval(this.timer); // 在Vue实例销毁前，清除我们的定时器
     }
-  }
+  },
 }
 </script>
 
 <style lang="scss" scoped>
   .nav-title {
-    min-width: 610px;
     background-color: $nav-menu-background;
     padding: 10px;
     .nav-location {

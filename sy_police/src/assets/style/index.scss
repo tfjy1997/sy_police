@@ -10,11 +10,49 @@ html,
 body {
   height: 100%;
   width: 100%;
+  min-width: 1100px;
   font-size: 14px;
-  overflow: hidden;
+  overflow-y: hidden;
 }
 
+// 基础文字样式 - 白
 .base-font-white {
   font-size: 16px;
   line-height: 18px;
+}
+
+// 基础按钮样式
+.base-button {
+  width: 90px;
+  color: $white-color;
+  background-color: $base-color;
+  &:active,&:hover {
+    background-color: $base-button-action
+  }
+}
+
+// 25*25 图片
+.img25 {
+  width: 25px;
+  height: 25px;
+}
+
+// 50*50 图片
+.img50 {
+  width: 50px;
+  height: 50px;
+}
+
+
+
+.el-menu {
+  .el-submenu {
+    .el-submenu__title {
+      &:focus,&:hover {
+        outline: 0 !important;
+        color: $base-color !important;
+        background: #333 !important;
+      }
+    }
+  }
 }

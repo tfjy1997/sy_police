@@ -3,6 +3,7 @@ export default {
     state.user = user
   },
   setPageName(state, page) {
+    state.pageName = {}
     if(page.firstTitle) {
       state.pageName.firstTitle = page.firstTitle
     }

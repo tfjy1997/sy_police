@@ -4,7 +4,7 @@
     <div class="middle-content">
       <left-menu></left-menu>
       <nav-title></nav-title>
-      <router-view></router-view>
+      <router-view class="content"></router-view>
     </div>
   </div>
 </template>
@@ -26,20 +26,32 @@ export default {
 
 <style lang="scss" scoped>
  .home {
-   width: 100%;
+  width: 100%;
+  min-width: 1024px;
    .home-hearder {
     width: 100%;
+    min-width: 920px;
    }
    .middle-content {
-      height: 100%;
+      height: calc( 100% - 75px );
+      min-width: 960px;
+      // overflow: hidden;
       .left-menu {
-        width: 20%;
+        width: 200px;
         float:left;
         height: 100%;
       }
       .nav-title {
-        margin-left:20%;
+        margin-left: 200px;
         height:45px; 
+        min-width: 720px;
+      }
+      .content {
+        margin-left: 200px;
+        padding: 1% 3%;
+        height: calc( 100% - 45px ) ;
+        min-width: 900px;
+        overflow: auto;
       }
    }
  }

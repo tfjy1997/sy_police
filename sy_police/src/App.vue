@@ -5,23 +5,13 @@
 </template>
 
 <style lang="scss">
-html, body {
-  margin:0;
-  padding:0;
-  overflow: auto;
-
-
-}
 #app {
   height: 100%;
   width: 100%;
-  min-width: 452px;
-  overflow: auto;
+  min-width: 920px;
 }
 .sy-police-page {
   width: 100%;
   height: 100%;
-  position:fixed;
-  
 }
 </style>

@@ -56,16 +56,16 @@ module.exports = {
   },
 
   // 配置webpack-dev-server 行为
-  devServer: {
-    hot: true,
-    port: 8088,
-    proxy: {
-      '/api': {
-        target: 'http://app.rmsdmedia.com',
-        pathRewrite: {
-          "^/api": ''
-        }
-      }
-    }
-  }
+  // devServer: {
+  //   hot: true,
+  //   port: 8088,
+  //   proxy: {
+  //     '/api': {
+  //       target: 'http://app.rmsdmedia.com',
+  //       pathRewrite: {
+  //         "^/api": ''
+  //       }
+  //     }
+  //   }
+  // }
 }
